@@ -1,20 +1,13 @@
-<!DOCTYPE html>
+OCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyeux Anniversaire Coumba Dada Kane ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-pink: #ff4d6d;
-            --secondary-pink: #ff758f;
-            --accent-gold: #ffd166;
-            --glass-bg: rgba(255, 255, 255, 0.12);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --text-white: #ffffff;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -24,181 +17,258 @@
         body {
             min-height: 100vh;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("photo.JPG");
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.95) 0%, rgba(255, 220, 230, 0.9) 50%, rgba(240, 200, 220, 0.85) 100%), 
+                        radial-gradient(circle at 20% 80%, rgba(255, 77, 109, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 209, 102, 0.08) 0%, transparent 50%);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: var(--text-white);
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
             overflow-x: hidden;
+            color: #2d1b2e;
         }
 
-        /* Container Principal */
         .container {
             width: 100%;
             max-width: 800px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 32px;
             z-index: 10;
         }
 
-        /* Glassmorphism Card */
-        .card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            padding: clamp(20px, 5vw, 45px);
+        .couple-mark {
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-            animation: slideUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: slideInDown 1s ease-out;
+        }
+
+        .couple-mark-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: bold;
+            color: #ff4d6d;
+            text-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.6) 0%, rgba(255, 220, 230, 0.4) 100%);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 77, 109, 0.3);
+            border-radius: 30px;
+            padding: clamp(24px, 5vw, 48px);
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 77, 109, 0.15);
+            animation: slideInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            animation-fill-mode: both;
+            animation-delay: 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 30px 80px rgba(255, 77, 109, 0.25);
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
             font-size: clamp(2rem, 8vw, 3.5rem);
-            color: var(--accent-gold);
-            text-shadow: 0 0 20px rgba(255, 209, 102, 0.5);
-            margin-bottom: 10px;
+            font-weight: bold;
+            color: #ff4d6d;
+            text-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+            margin-bottom: 8px;
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #ff4d6d, #ffd166);
+            margin: 16px auto 24px;
+            border-radius: 2px;
         }
 
         .names {
             font-size: clamp(1rem, 4vw, 1.5rem);
             font-weight: 600;
-            color: #fff;
-            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 24px;
             letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         #clock {
-            font-size: 0.9rem;
-            background: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
             padding: 8px 20px;
             border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .message {
             font-size: clamp(1rem, 3vw, 1.15rem);
-            line-height: 1.7;
+            line-height: 1.8;
             font-weight: 300;
-            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 32px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-        /* Bouton Interactif */
-        .btn-love {
-            padding: 15px 35px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink));
-            color: white;
-            font-size: 1.1rem;
+        .message p {
+            margin-bottom: 16px;
+        }
+
+        .message strong {
+            color: #ff6b8a;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+        }
+
+        .btn-love {
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.3);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .btn-love:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(255, 77, 109, 0.5);
+            box-shadow: 0 20px 50px rgba(255, 77, 109, 0.4);
         }
 
         .btn-love:active {
-            transform: translateY(0);
+            transform: translateY(0) scale(0.98);
         }
 
-        /* Lettre d'amour */
         #letter {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
             opacity: 0;
+            transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
             margin-top: 0;
         }
 
         #letter.open {
             max-height: 2000px;
             opacity: 1;
-            margin-top: 30px;
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            border-left: 4px solid var(--accent-gold);
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 77, 109, 0.3);
         }
 
         #letter h2 {
             font-family: 'Dancing Script', cursive;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: bold;
+            color: #ff6b8a;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 8px rgba(255, 77, 109, 0.1);
         }
 
         #letter p {
             text-align: left;
             font-size: 1rem;
-            line-height: 1.8;
+            line-height: 1.9;
             font-style: italic;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-        /* Compteur de Relation */
+        #letter p span {
+            display: block;
+        }
+
+        #letter p span:not(:first-child) {
+            margin-top: 16px;
+        }
+
         .love-counter {
-            margin-top: 10px;
-            padding: 25px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            border: 1px solid var(--glass-border);
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.6) 0%, rgba(255, 220, 230, 0.4) 100%);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 77, 109, 0.3);
+            border-radius: 30px;
+            padding: clamp(24px, 5vw, 40px);
             text-align: center;
-            animation: slideUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 20px 60px rgba(255, 77, 109, 0.15);
+            animation: slideInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+            animation-fill-mode: both;
+            animation-delay: 0.4s;
         }
 
         .love-counter h3 {
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-gold);
+            color: #ff4d6d;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 8px rgba(255, 77, 109, 0.1);
+        }
+
+        .counter-divider {
+            height: 2px;
+            width: 60px;
+            background: linear-gradient(90deg, #ff4d6d, #ffd166);
+            margin: 12px auto 24px;
+            border-radius: 2px;
         }
 
         #counter {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            gap: 15px;
+            gap: 12px;
             font-weight: 600;
         }
 
         .counter-item {
             display: flex;
             flex-direction: column;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 16px;
             border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .counter-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
         }
 
         .counter-value {
-            font-size: 1.4rem;
-            color: var(--primary-pink);
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            color: #ff4d6d;
+            font-weight: bold;
         }
 
         .counter-label {
             font-size: 0.7rem;
             text-transform: uppercase;
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 8px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
-        /* Animations de pluie */
+        /* Falling Particles */
         .heart, .confetti {
             position: fixed;
             top: -50px;
@@ -207,151 +277,195 @@
         }
 
         @keyframes fall {
-            to { transform: translateY(110vh) rotate(360deg); }
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
         }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* Responsive Adjustments */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
         @media (max-width: 480px) {
-            body { padding: 15px; }
-            .card { padding: 25px 15px; }
-            #counter { grid-template-columns: repeat(3, 1fr); }
+            body {
+                padding: 15px;
+            }
+            .container {
+                gap: 24px;
+            }
+            .card {
+                padding: 20px;
+            }
+            #counter {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- Carte Principale -->
-        <main class="card">
-            <h1>🎉 Joyeux Anniversaire 🎉</h1>
-            <div class="names">Mamadou ❤️ Coumba Dada Kane</div>
+        <!-- Couple Branding Mark -->
+        <div class="couple-mark">
+            <div class="couple-mark-text">M ❤ C</div>
+        </div>
 
-            <div id="clock">Chargement de l'heure...</div>
+        <!-- Main Card -->
+        <div class="card">
+            <h1>Joyeux Anniversaire</h1>
+            <div class="divider"></div>
+
+            <div class="names">Mamadou & Coumba Dada Kane</div>
+
+            <div id="clock">🕒 Chargement...</div>
 
             <div class="message">
-                Aujourd’hui est un jour exceptionnel, car il célèbre la naissance de la femme qui fait battre mon cœur. ❤️
-                <br><br>
-                <strong>Coumba Dada Kane</strong>, merci pour ton sourire, ta douceur, ta force et tout l’amour que tu apportes dans ma vie chaque jour.
+                <p>Aujourd'hui est un jour exceptionnel, car il célèbre la naissance de la femme qui fait battre mon cœur. ❤️</p>
+                <p><strong>Coumba Dada Kane</strong>, merci pour ton sourire, ta douceur, ta force et tout l'amour que tu apportes dans ma vie chaque jour.</p>
             </div>
 
             <button class="btn-love" onclick="toggleLetter()">
-                <span>💌</span> <span id="btn-text">Ouvrir ma lettre d’amour</span>
+                <span>💌</span>
+                <span id="btn-text">Ouvrir ma lettre d'amour</span>
             </button>
 
             <div id="letter">
                 <h2>Pour toi, mon amour ❤️</h2>
                 <p>
-                    Mon cœur,<br><br>
-                    Depuis que tu es entrée dans ma vie, tout a pris une couleur différente. Chaque sourire de toi est une victoire pour moi, chaque regard est un refuge, et chaque moment passé à tes côtés devient un souvenir que je garde précieusement.<br><br>
-                    En ce jour si spécial, je veux simplement te rappeler que tu es la plus belle chose qui me soit arrivée. Peu importe les distances, les difficultés ou le temps qui passe, mon choix restera toujours le même : <strong>toi</strong>.<br><br>
-                    Merci d’être celle qui fait vibrer mon cœur. ❤️<br><br>
-                    <strong>Que Dieu te protège, te comble de bonheur et nous accorde encore de longues années à nous aimer. ❤️🎂✨</strong><br><br>
-                    — Ton Mamadou ❤️
+                    <span>Mon cœur,</span>
+                    <span>Depuis que tu es entrée dans ma vie, tout a pris une couleur différente. Chaque sourire de toi est une victoire pour moi, chaque regard est un refuge, et chaque moment passé à tes côtés devient un souvenir que je garde précieusement.</span>
+                    <span>En ce jour si spécial, je veux simplement te rappeler que tu es la plus belle chose qui me soit arrivée. Peu importe les distances, les difficultés ou le temps qui passe, mon choix restera toujours le même : <strong>toi</strong>.</span>
+                    <span>Merci d'être celle qui fait vibrer mon cœur. ❤️</span>
+                    <span><strong>Que Dieu te protège, te comble de bonheur et nous accorde encore de longues années à nous aimer. ❤️🎂✨</strong></span>
+                    <span>— Ton Mamadou ❤️</span>
                 </p>
             </div>
-        </main>
+        </div>
 
-        <!-- Compteur de temps -->
-        <section class="love-counter">
-            <h3>❤️ Notre Histoire ❤️</h3>
+        <!-- Relationship Counter -->
+        <div class="love-counter">
+            <h3>Notre Histoire</h3>
+            <div class="counter-divider"></div>
             <div id="counter">
-                <!-- Rempli par JS -->
+                <!-- Rempli par JavaScript -->
             </div>
-        </section>
+        </div>
     </div>
 
     <script>
-        // Horloge Dynamique
+        // Update Clock
         function updateClock() {
             const now = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById("clock").innerHTML = "🕒 " + now.toLocaleDateString('fr-FR', options);
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('clock').innerHTML = '🕒 ' + now.toLocaleDateString('fr-FR', options);
         }
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Toggle Lettre
+        // Toggle Love Letter
         function toggleLetter() {
-            const letter = document.getElementById("letter");
-            const btnText = document.getElementById("btn-text");
-            letter.classList.toggle("open");
+            const letter = document.getElementById('letter');
+            const btnText = document.getElementById('btn-text');
+            letter.classList.toggle('open');
             
-            if(letter.classList.contains("open")) {
-                btnText.innerText = "Fermer la lettre";
-                letter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (letter.classList.contains('open')) {
+                btnText.innerText = 'Fermer la lettre';
+                letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             } else {
-                btnText.innerText = "Ouvrir ma lettre d’amour";
+                btnText.innerText = 'Ouvrir ma lettre d\'amour';
             }
         }
 
-        // Création des effets visuels (Cœurs et Confettis)
+        // Create Falling Particles
         function createParticles() {
             const container = document.body;
-            
-            // Cœurs
-            for(let i = 0; i < 40; i++) {
-                const heart = document.createElement("div");
-                heart.className = "heart";
-                heart.innerHTML = "❤️";
-                setupParticle(heart);
+            const colors = ['#ff4d6d', '#ffd166', '#06d6a0', '#4cc9f0', '#ffffff'];
+
+            // Hearts
+            for (let i = 0; i < 40; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+                heart.style.opacity = Math.random() * 0.7 + 0.3;
+                const duration = Math.random() * 5 + 5;
+                const delay = Math.random() * 10;
+                heart.style.animation = `fall ${duration}s linear ${delay}s infinite`;
                 container.appendChild(heart);
             }
 
-            // Confettis
-            const colors = ["#ff4d6d", "#ffd166", "#06d6a0", "#4cc9f0", "#ffffff"];
-            for(let i = 0; i < 40; i++) {
-                const confetti = document.createElement("div");
-                confetti.className = "confetti";
-                confetti.style.width = "8px";
-                confetti.style.height = "12px";
+            // Confetti
+            for (let i = 0; i < 40; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.width = '8px';
+                confetti.style.height = '12px';
                 confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                setupParticle(confetti);
+                confetti.style.left = Math.random() * 100 + 'vw';
+                const duration = Math.random() * 5 + 5;
+                const delay = Math.random() * 10;
+                confetti.style.animation = `fall ${duration}s linear ${delay}s infinite`;
                 container.appendChild(confetti);
             }
         }
-
-        function setupParticle(el) {
-            const left = Math.random() * 100;
-            const duration = Math.random() * 5 + 5;
-            const delay = Math.random() * 10;
-            const size = Math.random() * 15 + 10;
-
-            el.style.left = left + "vw";
-            el.style.fontSize = size + "px";
-            el.style.animation = `fall ${duration}s linear ${delay}s infinite`;
-            el.style.opacity = Math.random() * 0.7 + 0.3;
-        }
         createParticles();
 
-        // Compteur de Relation
-        const startDate = new Date("2025-09-26T00:00:00");
+        // Update Relationship Counter
+        const startDate = new Date('2025-09-26T00:00:00');
 
         function updateCounter() {
             const now = new Date();
-            const diff = now - startDate;
+            const diff = now.getTime() - startDate.getTime();
+
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+            const months = Math.floor((diff / (1000 * 60 * 60 * 24 * 30.44)) % 12);
+            const days = Math.floor((diff / (1000 * 60 * 60 * 24)) % 30.44);
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
 
             const units = [
-                { label: 'Ans', value: Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)) },
-                { label: 'Mois', value: Math.floor((diff / (1000 * 60 * 60 * 24 * 30.44)) % 12) },
-                { label: 'Jours', value: Math.floor((diff / (1000 * 60 * 60 * 24)) % 30.44) },
-                { label: 'Hrs', value: Math.floor((diff / (1000 * 60 * 60)) % 24) },
-                { label: 'Min', value: Math.floor((diff / (1000 * 60)) % 60) },
-                { label: 'Sec', value: Math.floor((diff / 1000) % 60) }
+                { label: 'Ans', value: years },
+                { label: 'Mois', value: months },
+                { label: 'Jours', value: days },
+                { label: 'Hrs', value: hours },
+                { label: 'Min', value: minutes },
+                { label: 'Sec', value: seconds }
             ];
 
-            const counterHTML = units.map(unit => `
+            document.getElementById('counter').innerHTML = units.map(unit => `
                 <div class="counter-item">
                     <span class="counter-value">${unit.value}</span>
                     <span class="counter-label">${unit.label}</span>
                 </div>
             `).join('');
-
-            document.getElementById("counter").innerHTML = counterHTML;
         }
 
         setInterval(updateCounter, 1000);
