@@ -1,0 +1,215 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joyeux Anniversaire Coumba Dada Kane ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",Arial,sans-serif;}
+
+body{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("photo.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    animation:zoom 1.5s ease;
+}
+
+h1{
+    font-size:2.8rem;
+    color:#ffe3ec;
+    text-shadow:0 0 15px #ff5c93;
+    margin-bottom:10px;
+}
+
+.names{
+    font-size:1.4rem;
+    margin-bottom:15px;
+    color:#fff8b5;
+    font-weight:bold;
+}
+
+#clock{
+    font-size:1rem;
+    margin-bottom:20px;
+    color:#f1f1f1;
+}
+
+.message{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#ff2f73;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ffe3ec;
+}
+
+#letter{
+    display:none;
+    margin-top:25px;
+    padding:20px;
+    background:rgba(255,255,255,.18);
+    border-radius:20px;
+    animation:fade 1.5s ease;
+}
+
+#letter h2{
+    color:#fff8b5;
+    margin-bottom:10px;
+}
+
+.heart{
+    position:absolute;
+    color:#fff;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
+
+.confetti{
+    position:absolute;
+    width:8px;
+    height:14px;
+    opacity:.9;
+    animation:confettiFall linear infinite;
+}
+
+@keyframes fall{
+    from{transform:translateY(-10vh);}
+    to{transform:translateY(110vh);}
+}
+
+@keyframes confettiFall{
+    from{transform:translateY(-10vh) rotate(0deg);}
+    to{transform:translateY(110vh) rotate(720deg);}
+}
+
+@keyframes zoom{
+    from{transform:scale(.8);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(15px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎉 Joyeux Anniversaire 🎉</h1>
+    <div class="names">Mamadou ❤️ Coumba Dada Kane</div>
+
+    <div id="clock"></div>
+
+    <div class="message">
+        Aujourd’hui est un jour exceptionnel, parce qu’il célèbre la naissance de la femme qui fait battre mon cœur. ❤️
+        <br><br>
+        Coumba Dada Kane, merci pour ton sourire, ta douceur, ta force et tout l’amour que tu apportes dans ma vie.
+        <br><br>
+        Je te souhaite une année remplie de bonheur, de santé, de réussite, de paix et d’innombrables moments de joie.
+        <br><br>
+        Que chacun de tes rêves se réalise, et que notre histoire continue de grandir avec encore plus d’amour chaque jour.
+        <br><br>
+        💖 Je t’aime infiniment. 💖
+    </div>
+
+    <button onclick="openLetter()">💌 Ouvrir ma lettre d’amour</button>
+
+    <div id="letter">
+        <h2>Pour toi, mon amour ❤️</h2>
+        <p>
+            Mon cœur,
+            <br><br>
+            Depuis que tu es entrée dans ma vie, tout a pris une couleur différente. Chaque sourire de toi est une victoire pour moi, chaque regard est un refuge, et chaque moment passé à tes côtés devient un souvenir que je garde précieusement.
+            <br><br>
+            En ce jour si spécial, je veux simplement te rappeler que tu es la plus belle chose qui me soit arrivée. Peu importe les distances, les difficultés ou le temps qui passe, mon choix restera toujours le même : <strong>toi</strong>.
+            <br><br>
+            Merci d’être celle qui fait vibrer mon cœur. ❤️
+            <br><br>
+            <strong>Joyeux anniversaire, Coumba Dada Kane. Que Dieu te protège, te comble de bonheur et nous accorde encore de longues années à nous aimer. ❤️🎂✨</strong>
+            <br><br>
+            — Ton Mamadou ❤️
+        </p>
+    </div>
+</div>
+
+<script>
+// Horloge
+function updateClock(){
+    const now = new Date();
+    document.getElementById("clock").innerHTML =
+        "🕒 " + now.toLocaleTimeString("fr-FR") +
+        " • " + now.toLocaleDateString("fr-FR");
+}
+setInterval(updateClock,1000);
+updateClock();
+
+// Lettre
+function openLetter(){
+    document.getElementById("letter").style.display="block";
+}
+
+// Pluie de cœurs
+for(let i=0;i<80;i++){
+    const h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(Math.random()*20+15)+"px";
+    h.style.animationDuration=(Math.random()*4+4)+"s";
+    h.style.opacity=Math.random();
+    document.body.appendChild(h);
+}
+
+// Confettis
+const colors=["#ff4d6d","#ffd166","#06d6a0","#4cc9f0","#ffffff"];
+for(let i=0;i<70;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+    c.style.animationDuration=(Math.random()*3+3)+"s";
+    document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
