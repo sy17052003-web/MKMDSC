@@ -128,6 +128,21 @@ button:hover{
     from{opacity:0;transform:translateY(15px);}
     to{opacity:1;transform:translateY(0);}
 }
+ .love-counter{
+    margin-top:30px;
+    padding:20px;
+    background:rgba(255,255,255,0.15);
+    border-radius:20px;
+    color:white;
+    font-size:1.2em;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+#counter{
+    font-weight:bold;
+    color:#ffe6f0;
+    font-size:1.1em;
+}
 </style>
 </head>
 
@@ -169,6 +184,14 @@ button:hover{
             — Ton Mamadou ❤️
         </p>
     </div>
+     <div class="love-counter">
+    ❤️ Notre histoire a commencé depuis ❤️
+    <br><br>
+
+    <div id="counter">
+        Chargement...
+    </div>
+</div>
 </div>
 
 <script>
@@ -209,6 +232,38 @@ for(let i=0;i<70;i++){
     c.style.animationDuration=(Math.random()*3+3)+"s";
     document.body.appendChild(c);
 }
+ // Date du début de votre relation
+const startDate = new Date("2025-09-26T00:00:00");
+
+function updateCounter(){
+
+    const now = new Date();
+
+    let difference = now - startDate;
+
+    let seconds = Math.floor(difference / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+    let months = Math.floor(days / 30);
+    let years = Math.floor(months / 12);
+
+    seconds %= 60;
+    minutes %= 60;
+    hours %= 24;
+
+    document.getElementById("counter").innerHTML =
+    years + " an(s) ❤️ " +
+    months % 12 + " mois ❤️ " +
+    days % 30 + " jours ❤️<br>" +
+    hours + " heures " +
+    minutes + " minutes " +
+    seconds + " secondes";
+
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
 </script>
 
 </body>
